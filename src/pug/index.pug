@@ -1,0 +1,179 @@
+extends includes/layout.pug
+block content
+    section.sec-img-1(class="wow bounceInUp" data-wow-duration="1s")
+        .container 
+            h2(class="title-1").title-fredreka
+                | A Dining Experience
+    section(class="sec-2 wow lightSpeedIn" data-wow-duration="2s" data-wow-delay="1s")
+        .container
+            .row
+                .col-12.col-md-12.col-lg-1
+                -
+                    let x = [
+                        ['rgb(242, 114, 87)','rgb(93, 160, 170)'],
+                        ['rgb(93, 160, 170)','rgb(34, 58, 71)'],
+                        ['rgb(34, 58, 71)','rgb(242, 114, 87)'],
+                    ]
+                each val in x
+                    .col-12.mb-3.col-md-4.col-lg-3
+                        +mainImgeCircle1(val[0],val[1])
+                .col-12.col-md-2.col-lg-2
+    section(class="sec-p")
+        .container
+            div.welcome-p
+                +mainHeading('rgb(255, 181, 161)','Welcome to','The Backbeach Eating House')
+    section(class="sec-3")
+        .container
+            div.pead-1
+                .row
+                    .col-sm-12.col-lg-1
+                    .col-sm-12.col-lg-8
+                        div.co-ph
+                            p.ph-1
+                                | There's Only One Place Like The Backbeack Cafe & Restaurent,located on Bunbury's Backbeach With uninterrupted views of crisp White sand and the Indian Ocean. The Perfect Place to eat, ralax and enjoy 
+                            p.ph-2.title-fredreka
+                                | We are proud to support local basiness and local producers by courcing as much as possible locally,including fish from Augusta, beet and chicken from Wwestern Austrailia (DBC) Coffee from Yollingup and Wines from Feguson Valley, Margaret River and throghout the South West.
+                    .col-sm-12.col-lg-1
+                        +mainBtn('rgb(34, 58, 71)',true).hvr-icon-wobble-horizontal
+    section.sec-4
+        .container
+            .row
+                .col-sm-12.col-md-12.col-lg-2
+                .col-sm-12.col-md-12.col-lg-4
+                    div.co-main-img(class="wow rollIn" data-wow-duration="2s" data-wow-delay="0.25s")
+                        p.title-fredreka(class="para-1")
+                            | whats On
+                        +imgCircle('rgb(34, 58, 71)','news-placeholder.png')
+                        p.title-fredreka(class="para-2")
+                            | 10.0.0.1
+                .col-sm-12.col-md-6.col-lg-5
+                    div.hp-main 
+                        h2.hp-main-1.title-fredreka
+                            | Mother's Day
+                        p 
+                            | Join us to celebrate your mum this Mother's Day.Breakfast and lunch are preity full but we're taking dinner bookings so yo...
+                        +mainBtn('rgb(34, 58, 71)',false)
+                .col-1
+    section.sec-c4
+        .container
+            div.h-title
+                +mainHeading-2('rgb(93, 160, 170)','Served breah','white','from the paddock to the plate')
+            div.h-read 
+                .row
+                    .col-sm-12.col-lg-1
+                    .col-sm-12.col-lg-8
+                        p.h-read-1.title-fredreka
+                            | There's Only One Place Like The Backbeack Cafe & Restaurent,located on Bunbury's Backbeach With uninterrupted views of crisp White sand and the Indian Ocean. The Perfect Place to eat, ralax and enjoy 
+                        p.h-read-2.title-fredreka
+                            | We are proud to support local basiness and local producers by courcing as much as possible locally,including fish from Augusta, beet and chicken from Wwestern Austrailia (DBC) Coffee from Yollingup and Wines from Feguson Valley, Margaret River and throghout the South West.
+                    .col-sm-12.col-lg-3
+                        +mainBtn('rgb(242, 114, 87)',true)
+            div(class="d-none d-lg-flex h-img wow bounceInUp")
+                .row 
+                    .col-2
+                    -
+                        let e = [
+                            ['rgb(242, 114, 87)'],
+                            ['rgb(93, 160, 170)'],
+                            ['rgb(34, 58, 71)'],
+                        ]
+                    each val in e
+                        .col-3
+                            +imgCircle(val[0])
+                    .col-1
+    section.sec-5
+        .container
+            div.co-bd
+                .row
+                    .col-lg-5.col-sm-12
+                    .col-lg-7.col-sm-12
+                        div.bd-prag
+                            h2.title-fredreka
+                                | Happy Customers 
+                            div(class ="bd-text wow bounceInRight" data-wow-duration="2s")
+                                p.bd-text-1
+                                    | Ah! What a place. i could go have breakfast every single day and not get tired by the views. the staff are very kind and helpful, and the food is AMAZING! A MUSi visit place if you're visiting Bunbury!
+                                b
+                                    | Saad Uido
+    section.sec-6
+        .container
+            div.cont-input
+                div.cont-sub(class="mb-5")
+                    +mainHeading-2('rgb(93, 160, 170)','Sign Up','white','Subscribe to our email newsletter')
+                div 
+                    form.row
+                        .col-sm-12.col-md-auto
+                            input.sub-sn.form-control(type="text", placeholder="you Name")
+                        .col-sm-12.col-md-auto
+                            input.sub-sn.form-control(type="email", placeholder="you Email")
+                        .col-sm-12.col-md-auto
+                            button.sub-btn.btn.mb-3(type="submit") subscribe
+    section(class="sec-7")
+        .container
+            div.hd-title-7
+                +mainHeading('rgb(255, 181, 161)','Sociale','Follow us in facebook & instagram')
+    section(class="sec-8")
+        .container
+            .row
+                .col-sm-12.col-md-2
+                .col-sm-12.col-md-8
+                    div.cont
+                        .row
+                            .col-12
+                                div.cont-co
+                                    .row
+                                        .col-sm-2.col-md-auto
+                                            a(href="#").mr-3.cont-a
+                                                i.fab.fa-facebook-f
+                                        .col-sm-10.col-md-auto
+                                                    span.co-reqest.title-fredreka
+                                                        | What's new on facebook
+                            .col-sm-12.col-md-6 
+                                div
+                                    img.co-img(src="./assets/imgs/call-to-action-1.png", alt="")
+                            .col-sm-12.col-md-6
+                                div.cont-1 
+                                    span 
+                                        i.fas.fa-calendar-alt.co-icon
+                                        span 
+                                            | Posted 31 Jan 2020
+                                    span.cont-1-a
+                                        i.fas.fa-thumbs-up.co-icon
+                                        span 
+                                            | 24 Likes
+                                div.cont-2
+                                    p 
+                                        | Ckek out the view (and the dolphins, they're out there today!) Duis posuerejusto sed tellus congue, a convallis metus molestie. Quisque ante feugiat velit ullam corper venenatis congue.
+                                    p.para-img.title-fredreka
+                                        | Read in facebook
+                .col-sm-12.col-md-2
+                .col-sm-12.col-md-2
+                .col-sm-12.col-md-7
+                    div.cont-icon
+                        a.m-3(href="#")
+                            i.fab.fa-instagram.icon 
+                        span.title-fredreka 
+                            | @Backew'ldld's
+                .col-sm-12.col-md-3
+    section.sec-9
+        .container
+            div.co-sign
+                div.hd-main
+                    +mainHeading('rgb(242, 114, 87)','contact','send us a message below')
+                div.co-input
+                    .row
+                        .col-sm-12.col-lg-6 
+                            input.sn-inpt.form-control(type="name", placeholder="you Name")
+                            input.sn-inpt.form-control(type="phone", placeholder="you Phone")
+                            input.sn-inpt.form-control(type="email", placeholder="you Email")
+                        .col-sm-12.col-lg-6
+                            textarea.sn-tery.form-control(name="message" , value="you Message", rows="3") 
+                            br
+                            button.send-btn.btn(type="submit") Send
+                    div.h-copy.mt-4
+                        .row
+                            .col-sm-2.col-md-auto.ml-3
+                                i.far.fa-copyright 
+                            .col-sm-10.col-md-auto   
+                                p 
+                                    | Copyright sit amet, consectetur adipisicing //sit amet, consectetur 
